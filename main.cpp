@@ -32,7 +32,7 @@ std::string search_algorithm(std::string keyword, std::string folderpath) {
 	dr = opendir("db/");
 	if (dr) {
 		while ((en = readdir(dr)) != NULL) {
-			std::string filename = std::string(en->d_name);
+			std::string filename = en->d_name;
 			std::string filepath = folderpath + filename;
 			if (filename == "." || filename == "..") {
 			}
